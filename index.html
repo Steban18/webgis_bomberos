@@ -1,7 +1,7 @@
 <html>
 <head> 
 	<meta charset="UTF-8">
-	<title>Compañias Bomberos Tacna</title>
+	<title>CompaÃ±ias Bomberos Tacna</title>
 	<link rel="stylesheet" href="css/leaflet.css" />
 	
 	<style> 
@@ -57,6 +57,19 @@
 	   version: '1.1.1',
 	   attribution: "SENCICO"
 	}).addTo(map);
+		
+		var MyLayer = L.CanvasLayer.extend({
+    render: function() {
+        var canvas = this.getCanvas();
+        var ctx = canvas.getContext('2d');
+        // render
+    }
+});
+
+
+// create and add to the map
+var layer = new MyLayer();
+layer.addTo(map);
 	
 	</script>
 	</body> 
